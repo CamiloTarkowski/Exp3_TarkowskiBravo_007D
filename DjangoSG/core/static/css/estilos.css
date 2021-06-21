@@ -1,0 +1,209 @@
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body{
+    background: rgb(223, 237, 255);
+}
+  a{
+    color:rgb(255, 252, 230);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -1px;
+    font-weight: bold;
+
+
+  }
+
+.centertext{
+    color: rgb(44, 44, 44);
+    text-align: center;
+  }
+.fondocolor{
+    background-color: rgb(158, 198, 250);;
+}
+
+.style-formulario{
+  width: 50%;
+  background: rgb(255, 255, 255);
+  padding: 100px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:rgb(149, 149, 149);
+  font-size: 17px;
+  box-shadow: 7px 13px 15px rgb(197, 196, 196);
+}
+.style-inicio{
+  width: 50%;
+  background: rgb(255, 255, 255);
+  padding: 18px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:rgb(149, 149, 149);
+  font-size: 17px;
+  box-shadow: 7px 13px 15px rgb(197, 196, 196);
+}
+
+.botones{
+  width: 100%;
+  border: none;
+  padding: 12px;
+  color: rgb(233, 233, 233);
+  background-color: rgb(124, 163, 255);
+  margin: 0px;
+  
+}
+
+
+::placeholder { 
+  color: rgb(205, 205, 205);
+  font-style: italic;
+
+ }
+
+.derecha{
+    text-align: justify;
+    text-align: right;
+  }
+
+.derecha2{
+  text-align: justify;
+  text-align: right;
+  }
+
+.carousel {
+   width: 100%;
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+
+ .texto1{
+   background-color: rgb(70, 77, 222);
+   width: 100%;
+ }
+ .texto2{
+  background-color: rgb(255, 250, 158);
+  width: 100%;
+}
+ footer{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+ }
+ .barcolor{
+   background-color: rgb(45, 59, 154);
+ }
+
+ .textopequeño{
+   font-size: large;
+ }
+
+ /* Personalización página Quiénes somos */
+
+.qsomos{/*Historia*/
+  background-color:rgb(234, 223, 136);
+}
+
+.qsomos1{ /*Misión*/
+  background-color: rgb(63, 63, 185);
+  width: 420px;
+  height:480px;
+  margin-top: 20px;
+  float: right;
+  margin-right: 17%;
+}
+
+.qsomos2{ /*Visión*/
+  background-color: rgb(74, 91, 205);
+  width: 1175px;
+  margin-left: 17%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.principal{
+  background-color: rgb(147, 24, 24);
+  width: max-content;
+}
+
+.historia{
+  color:rgb(13, 17, 46)
+}
+
+
+h2{ /*logo SG*/
+  text-align: center;
+}
+
+h3{
+  margin-top: 20px;
+  text-align: center;
+}
+.linkyt{
+  margin-top:20px;
+  margin-left: 17%;
+  left:10px;
+}
+
+
+p{
+  font-size: larger;
+}
+
+.tarjeta{
+  width:50%;
+  margin:10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+  justify-content: center;
+  align-items: center;
+}
+
+.estilo_comentario{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+
+.contenido{
+  margin:10px;
+}
+
+.estiloInput{
+  width:100%;
+  height: 40px;
+  border: 1px solid rgb(186, 186, 186);
+}
+
+.recorteimg > img{
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.p1_inicio{
+  box-shadow: 7px 13px 15px rgb(196, 196, 197);
+  border-radius: 4px; background-color: rgb(124, 163, 255);
+  color: rgb(239, 239, 239);
+  font-family:  Calibri;
+  margin:auto;
+}
+.p2_inicio{
+  color:rgb(241, 239, 189);
+}
+
+

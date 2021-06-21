@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <meta charset="UTF-8">
+        <title>Paga todas tus cuentas en un mismo lugar</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    </head>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <body>
+
+  
+      <nav class="navbar navbar-expand-sm barcolor"> <!--Menú de navegación-->
+        <a class="navbar-brand" href="#">
+          <img src="img/logochico.png" width="30" height="25" alt="">
+        </a>
+          <ul class="navbar-nav">
+
+            <li class="nav-item">
+              <a class="nav-link" href="inicio.html">INICIO</a>
+              
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html">GALERÍA DE FOTOS</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="quienessomos.html">¿QUIÉNES SOMOS?</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="registro.html">REGÍSTRATE</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="comentario.html">DEJA TU COMENTARIO</a>
+            </li>
+          </ul>
+        </nav>
+
+
+        <div class="style-inicio">
+                <div class="container-fluid p-3  texto1 p1_inicio"> <!--container morado párrafo 1-->
+                  <h1 >Te presentamos SimpleGasto</h1>
+                  <p class="textopequeño">Un portal en donde encontrarás todas las facilidades para ir al día con todas tus cuentas. Tenemos compatibilidad con más de 200 empresas chilenas y con más de 100 empresas internacionales. Aquí podrás organizar tus gastos mensuales y planificar de una manera más rápida.</p>
+                </div>
+                <div id="demo" class="carousel slide" data-ride="carousel" style="box-shadow: 7px 0px 15px rgb(197, 196, 196); border-radius: 4px;"><!--Carrusel con 3 diapos-->
+                  <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                  </ul>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/carru1.png" alt="1" width="100%" style="height:auto; border-radius: 4px;">
+                      <div class="carousel-caption">
+                        <h3 onmouseover="style.color = '#FFFF5C'" onmouseout="style.color= '#FFFFFF'">Paga todo en un mismo lugar.</h3>
+                      </div>   
+                    </div>
+                    <div class="carousel-item" >
+                      <img src="img/carru2.jpg" alt="2" width="100%" style="height:auto; border-radius: 4px;">
+                      <div class="carousel-caption">
+                        <h3 onmouseover="style.color = '#FFFF5C'" onmouseout="style.color= '#FFFFFF'">Olvídate de esperar largas filas y de pagar con efectivo.</h3>
+                      </div>   
+                    </div>
+                    <div class="carousel-item" >
+                      <img src="img/carru3.jpg" alt="3" width="100%" style="height:auto; border-radius: 4px;">
+                      <div class="carousel-caption">
+                        <h3 onmouseover="style.color = '#FFFF5C'" onmouseout="style.color= '#FFFFFF'">Playstation Network ya llegó a SimpleGasto.</h3>
+                      </div>   
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </a>
+                </div>
+                <div class="container-fluid p-3 texto2 p1_inicio" style="box-shadow: 7px 13px 15px rgb(197, 196, 196); border-radius: 4px;"> <!--container amarillo párrafo 2-->
+                  <h1>Olvídate de las cuentas con una transacción</h1>
+                  <p class="textopequeño">Además, tendrás la posibilidad de hacer una transacción única, la que te pondrá al día de forma automática con la totalidad de tus deudas, o bien, también podrás realizar distintas transacciones acomodándote a la fecha de vencimiento de cada cuenta. Si quieres ahorrar tiempo en tus trámites mensuales, únete a nosotros y paga cómodamente.</p>
+                </div>
+                <br>
+                <hr>
+                <h1 style="text-align: center;">Feriados en Chile, 2021 <img src="img/gobierno.png" width="10%" style="height:auto; border-radius: 4px;"></h1>
+                <hr>
+                <div id="caja">
+                  <button class="botones" type="button" id="mostrar">Mostrar </button>
+                                    
+              
+                    
+                </div>
+                <br><br>
+                <script type="text/javascript">
+                  $(document).ready(function()
+                  {
+                      $("#mostrar").click(function(){
+          
+                          $.get("https://apis.digital.gob.cl/fl/feriados/2021",
+                              function(data){
+                                  
+                                  $.each(data,function(i,item){
+                                      $("#fechas").append("<tr><td>"+item.nombre+"</td><td>"+item.fecha +
+                                      "</td><td>"+ item.tipo+ "</td></tr>");
+                                      
+          
+                                  });
+          
+                              });
+                      });
+                  })
+              </script>
+              </script>
+
+                <table class="table" id="fechas">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Tipo</th>
+                        </tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+        </div>
+                
+        <footer> <!--Footer-->
+          <div class="container-fluid fondocolor">
+            <p class="centertext">Camilo Tarkowski, Benjamín Bravo. @Copyrigth Derechos reservados.</p>
+            <div align ="center"><img src="img/rrss.png" width="180px" height="100px"></div>
+          </div>
+        </footer>
+                  
+    </body>
+  
+</html>
