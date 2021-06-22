@@ -8,6 +8,6 @@ urlpatterns=[
     path('crear_usuario/',crear_user,name="crear_user"),
     path('mod_usuario/',mod_user,name="mod_user"),
     path('ver_usuario/',ver_user,name="ver_user"),
-    path('eliminar_usuario/',eliminar_user,name="eliminar_user"),
+    path('eliminar_usuario/<id>',eliminar_user,name="eliminar_user"),
     
 ]

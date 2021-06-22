@@ -1,6 +1,11 @@
 from django.shortcuts import render,redirect
 from .models import Usuario
 from .forms import UsuarioForm
+from django.views.decorators import csrf
+from rest_framework.serializers import Serializer
+
+
+
 
 # Create your views here.
 
@@ -22,10 +27,25 @@ def crear_user(request):
     return render(request, 'core/crear_user.html', {'usuario_form': usuario_form})
 
 def mod_user(request):
-    return render(request,'core/mod_user.html')    
+    usuario = Usuario.objects.get(rut=id)
+
+    datos ={
+        'form': UsuarioForm(instance=usuario)
+    }
+    if request.method == 'POST': 
+        formulario = UsuarioForm(data=request.POST, instance = usuario)
+        if formulario.is_valid: 
+            formulario.save()           
+            return redirect('inicio')
+    return render(request, 'core/mod_user', datos)
+
+def eliminar_user(request,id):
+    usuario = Usuario.objects.get(rut=id)
+    usuario.delete()
+    return redirect('ver_user')
+   
 
 def ver_user(request):
-    return render(request,'core/ver_user.html')
+    usuarios = Usuario.objects.all()
 
-def eliminar_user(request):
-    return render(request,'core/eliminar_user.html')
+    return render(request, 'core/ver_user.html', context={'usuarios':usuarios})

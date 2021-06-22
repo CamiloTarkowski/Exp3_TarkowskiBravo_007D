@@ -37,83 +37,33 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'ver_user' %}">MOSTRAR Usuario</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'eliminar_user' %}">ELIMINAR Usuario</a>
-            </li>
           </ul>
         </nav>
-
-        <script>
-          function aMayusculas()
-        {
-            var nombre = document.getElementById("nombre");
-            nombre.value = nombre.value.toUpperCase();
-
-            var apellidop = document.getElementById("apellidop");
-            apellidop.value = apellidop.value.toUpperCase();
-
-            var apellidom = document.getElementById("apellidom");
-            apellidom.value = apellidom.value.toUpperCase();
-
-        }
-        </script>
-        <script>
-          function colorIn(a)
-            {
-                a.style.background = "#F5FEFF";
-            }
-          function colorOut(a)
-          {
-                a.style.background = "#FFFFFF";
-          }
-        </script>
-
         <section class = "style-formulario">
 
             <h2 style="font-family: monospace;">Modificar usuario</h1>
             <hr>
-            <form action="" method="post" name="datos" onsubmit="return valiRegistro()">
-                <label for="nombre">Nombres (*) </label>
-                <input class="estiloInput" type="text" id="nombre" name="nombre" placeholder="GUILLERMO ANDRÉS" onfocus="colorIn(this)" onblur="colorOut(this)"  onchange="aMayusculas()" >
-                <br><br>
-                <label for="apellidop">Apellido paterno (*) </label>
-                <input class="estiloInput" type="text" id="apellidop" name="apellidop" placeholder="LÓPEZ" onfocus="colorIn(this)" onblur="colorOut(this)" onchange="aMayusculas()" >
-                <br><br>     
-                <label for="apellidom">Apellido materno (*) </label>
-                <input class="estiloInput" type="text" id="apellidom" name="apellidom" placeholder="VÁSQUEZ" onfocus="colorIn(this)" onblur="colorOut(this)" onchange="aMayusculas()" >
-                <br><br> 
-                <label for="rut">RUT (*) </label>
-                <input class="estiloInput" type="text" id="rut" name="rut" placeholder="12345678-9" onfocus="colorIn(this)" onblur="colorOut(this)" >
-                <br><br> 
-                <label for="fono">Teléfono (*) </label>
-                <input class="estiloInput" type="number" id="fono" name="fono" placeholder="987654321" onfocus="colorIn(this)" onblur="colorOut(this)" >
-                <br><br>
-                <label for="email">Email (*) </label>
-                <input class="estiloInput" type="text" id="email" name="email" placeholder="ejemplo@email.com" onfocus="colorIn(this)" onblur="colorOut(this)" >
-                <br><br>
-                <label for="confemail">Confirmar Email (*) </label>
-                <input class="estiloInput" type="text" id="confemail" name="confemail" placeholder="ejemplo@email.com" onfocus="colorIn(this)" onblur="colorOut(this)" >
-                <br><br>
-                <label for="pass">Contraseña (*) </label>
-                <input class="estiloInput" type="password" id="pass" name="pass" placeholder="Escriba su contraseña" onfocus="colorIn(this)" onblur="colorOut(this)">
-                <br><br>
-                <label for="confpass">Confirmar Contraseña (*) </label>
-                <input class="estiloInput" type="password" id="confpass" name="confpass" placeholder="Confirme su contraseña" onfocus="colorIn(this)" onblur="colorOut(this)" >
-                <br><br>
-                <label for="opcion">Género: </label>
-                <select id="genero" name="opcion">
-                    <option value="">- Selecciona una opción -</option>
-                    <option value="1">Mujer</option>
-                    <option value="2">Hombre</option>
-                    <option value="3">Otro</option>
-                </select>
-                <hr>
-                <input type="checkbox" id="terminos" name="terms" onclick="">
-                <label for="terminos"> Al registrarte estás aceptando los Términos y Condiciones</label>
-                <br><br>
-                <input class="botones" type="submit" value="Crear Usuario">
-                <br><br>
-            </form>
+            <div class="container">
+              <div class="row">
+                  <h1>Modificando Usuarios</h1>
+              </div>
+      
+              <div class="row">
+                      <form method="POST" action="#" id="formulario">
+                          {%csrf_token%}
+                          <div class="form-group">
+                              {{form.as_table}}
+                          </div>
+                      
+                      
+                              <div class="form-group">
+                               <input type="submit" class="btn btn-danger" id="modificar" value="Modificar">
+                              <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+                          </div>
+                      </form>
+      
+              </div>
+            </div>
             
     
             
