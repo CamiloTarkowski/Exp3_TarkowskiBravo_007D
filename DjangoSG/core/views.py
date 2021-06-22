@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .models import Usuario
+from .forms import UsuarioForm
 
 # Create your views here.
 
@@ -10,7 +12,14 @@ def galeria(request):
     return render(request,'galeria.html')
 
 def crear_user(request):
-    return render(request,'core/crear_user.html')
+    if request.method=='POST': 
+        usuario_form = UsuarioForm(request.POST)
+        if usuario_form.is_valid():
+            usuario_form.save()
+            return redirect('inicio')
+    else:
+        usuario_form= UsuarioForm()
+    return render(request, 'core/crear_user.html', {'usuario_form': usuario_form})
 
 def mod_user(request):
     return render(request,'core/mod_user.html')    
