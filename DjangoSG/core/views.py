@@ -26,7 +26,7 @@ def crear_user(request):
         usuario_form= UsuarioForm()
     return render(request, 'core/crear_user.html', {'usuario_form': usuario_form})
 
-def mod_user(request):
+def mod_user(request,id):
     usuario = Usuario.objects.get(rut=id)
 
     datos ={
